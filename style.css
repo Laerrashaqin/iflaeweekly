@@ -1,0 +1,79 @@
+/* Reset dasar */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #fce4ec, #e3f2fd, #ede7f6);
+}
+
+/* Judul utama */
+h1 {
+    text-align: center;
+    background: linear-gradient(to right, #f8bbd0, #d1c4e9, #bbdefb);
+    color: #4a148c;
+    padding: 25px;
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Garis */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+}
+
+/* Menu navigasi */
+table {
+    margin: 25px auto;
+    border-collapse: collapse;
+}
+
+/* Box menu */
+td {
+    background: #f8bbd0;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* Link menu */
+td a {
+    color: #6a1b9a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Hover lucu ✨ */
+td:hover {
+    background: #d1c4e9;
+    transform: scale(1.05);
+}
+
+/* Judul biodata */
+h3 {
+    text-align: center;
+    color: #6a1b9a;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+/* Card biodata */
+p {
+    width: 70%;
+    margin: 25px auto;
+    background: linear-gradient(145deg, #ffffff, #f3e5f5);
+    padding: 25px;
+    border-radius: 20px;
+    line-height: 1.7;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    color: #444;
+}
+
+/* Tambahan efek smooth */
+* {
+    transition: all 0.3s ease;
+}
