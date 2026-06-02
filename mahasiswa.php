@@ -1,3 +1,10 @@
+<?php
+
+    $koneksi = mysqli_connect("localhost", "root", "", "iflaeweekly");
+    $query = "SELECT * FROM mahasiswa";
+    $result = mysqli_query($koneksi, $query);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,52 +48,28 @@
                 <th >Email</th>
                 <th >No. HP</th>
                 <th >Foto</th>
+                <th >Aksi</th>
             </tr>
+            <?php
+                while($mhs = mysqli_fetch_row($result))
+                {
+            ?>
             <tr>
-                <td align="center">1</td>
-                <td>Laerra Shaqin Zahna</td>
-                <td align="center">13182420108</td>
-                <td align="center">Informatika</td>
-                <td align="center">laerrashaqinzahna@gmail.com</td>
-                <td >0895177840231</td>
-                <td><img src="aset/images/Laerra_108.JPEG" width="70px" height="70px"/></td>
-            </tr>
-            <tr>
-                <td align="center">2</td>
-                <td> Park Chanyeol</td>
-                <td align="center">13182420107</td>
-                <td align="center">Informatika</td>
-                <td align="center">parkchanyeol@gmail.com</td>
-                <td >0895177840232</td>
-                <td><img src="aset/images/chanyeol.jpg" width="70px" height="70px"/></td>
-                <td>
+                <td align="center"><?= $mhs[0] ?></td>
+                <td><?php echo $mhs[1] ?></td>
+                <td align="center"><?= $mhs[2] ?></td>
+                <td align="center"><?= $mhs[3] ?></td>
+                <td align="center"><?= $mhs[4] ?></td>
+                <td ><?= $mhs[5] ?></td>
+                <td><img src="aset/images/<?= $mhs[6] ?>" width="70px" height="70px"/></td>
+                 <td>
                     <a href="uabhdata.php" style=""><button>Edit</button></a> <a href="hapusdata.php"><button>Hapus</button></a>
                 </td>
-        </table>
-        <hr>
-         <h3>Latihan</h3>
-        <table border="1" cellspacing="0" cellpadding="10px">
-            <tr>
-                <td>1,1</td>
-                <td>1,2</td>
-                <td>1,3</td>
-                <td>1,4</td>
             </tr>
-            <tr>
-                <td>2,1</td>
-                <td   align="center">?</td>
-                <td>2,4</td>
-            </tr>
-            <tr>
-                <td>3,1</td>
-                <td>3,4</td>
-            </tr>
-            <tr>
-                <td>4,1</td>
-                <td>4,2</td>
-                <td>4,3</td>
-                <td>4,4</td>
-            </tr>
+            <?php
+            $no++;
+                }
+            ?>
         </table>
 </body>
-</html>
+</html> 
