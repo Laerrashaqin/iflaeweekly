@@ -1,8 +1,7 @@
 <?php
-
-    $koneksi = mysqli_connect("localhost", "root", "", "iflaeweekly");
-    $query = "SELECT * FROM mahasiswa";
-    $result = mysqli_query($koneksi, $query);
+    require "fungsi.php";
+    $qmahasiswa = "SELECT * FROM mahasiswa";/// karena query ke tabel mahasiswa
+    $mahasiswas = tampildata($qmahasiswa); /// menghasilkan data mahasiswa dalam lemari
 ?>
 
 <!DOCTYPE html>
@@ -51,11 +50,12 @@
                 <th >Aksi</th>
             </tr>
             <?php
-                while($mhs = mysqli_fetch_row($result))
+                $no = 1;
+                foreach($mahasiswas as $mhs)
                 {
             ?>
             <tr>
-                <td align="center"><?= $mhs[0] ?></td>
+                <td align="center"><?= $no ?></td>
                 <td><?php echo $mhs[1] ?></td>
                 <td align="center"><?= $mhs[2] ?></td>
                 <td align="center"><?= $mhs[3] ?></td>
