@@ -63,7 +63,8 @@
                 <td ><?= $mhs[5] ?></td>
                 <td><img src="aset/images/<?= $mhs[6] ?>" width="70px" height="70px"/></td>
                  <td>
-                    <a href="uabhdata.php" style=""><button>Edit</button></a> <a href="hapusdata.php"><button>Hapus</button></a>
+                    <a href="ubahdata.php?id=<?=$mhs[0] ?>"><button>Edit</button></a> 
+                    <a href="hapusdata.php?id=<?=$mhs[0] ?>" onclick="return confirm('Yakinnn nyakkk??')"><button>Hapus</button></a>
                 </td>
             </tr>
             <?php

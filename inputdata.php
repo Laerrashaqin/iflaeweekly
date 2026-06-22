@@ -2,7 +2,7 @@
     require "fungsi.php";
     if(isset($_POST["kirim"]))
     {
-        if(tambahdata($_POST) > 0)
+        if(tambahdata($_POST, $_FILES["foto"]) > 0)
         {
             echo "<script>
                     alert('Data berhasil ditambahkan!');
@@ -47,7 +47,7 @@
             </tr>
     </table>
     <h2>Input Data Mahasiswa</h2>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <table border="0" cellspacing="5px">
             <tr>
                 <td><label for="nama">Nama</label></td>
@@ -77,7 +77,7 @@
             <tr>
                 <td><label for="foto">Foto</label></td>
                 <td>:</td>
-                <td><input type="text" name="foto" id="foto" /></td>
+                <td><input type="file" name="foto" id="foto" /></td>
         </table>
         <button type="submit" name="kirim">Kirim Data</button>
     </form>
