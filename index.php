@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+// Cek apakah user belum login (session username kosong)
+if (!isset($_SESSION['username'])) {
+    // Jika belum login, paksa pindah ke halaman login.php
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
